@@ -1,0 +1,217 @@
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #084d74;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#header {
+    height: 150px;
+    background-image: url("img/habbo-header.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+}
+
+#header h1 {
+    color: white;
+    font-size: 34px;
+}
+
+#nav {
+    min-height: 50px;
+    background-color: #155c86;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    padding: 10px;
+}
+
+#nav a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#nav a:hover {
+    color: #ffce45;
+    text-decoration: underline;
+}
+
+.kolom {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "left middle right"
+        "left buildteam buildteam";
+    gap: 15px;
+    padding: 20px 15px;
+    align-items: stretch;
+}
+
+#left {
+    grid-area: left;
+    background-image: url("img/habbo-hotel.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 0;
+}
+
+#middle {
+    grid-area: middle;
+    background-image: url("img/habbo-hotel.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 0;
+}
+
+#right {
+    grid-area: right;
+    background-image: url("img/habbo-hotel.jpg");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 0;
+}
+
+#buildteam {
+    grid-area: buildteam;
+    margin-bottom: 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#foto {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    margin: 10px auto;
+}
+
+.box {
+    background-color: white;
+    border: 4px solid #dedede;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+.box h2 {
+    font-size: 20px;
+    padding: 8px;
+    margin: 0 0 15px 0;
+    border-radius: 3px;
+}
+
+.blue-title {
+    background-color: #2989ed;
+    color: white;
+}
+
+.green-title {
+    background-color: green;
+    color: white;
+}
+
+.purple-title {
+    background-color: purple;
+    color: white;
+}
+
+.yellow-title {
+    background-color: #f0b629;
+    color: white;
+}
+
+.box h3 {
+    font-size: 16px;
+    margin: 15px 0 10px;
+}
+
+.box p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.leftpicture {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.leftpicture img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#middle .box,
+#right .box {
+    height: 100%;
+    margin-bottom: 0;
+}
+
+#favourite img,
+#lastest-builds img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
+
+@media (max-width: 800px) {
+
+    .kolom {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "left"
+            "middle"
+            "right"
+            "buildteam";
+    }
+
+    #middle .box,
+    #right .box {
+        height: auto;
+    }
+
+    #nav {
+        gap: 15px;
+    }
+}
